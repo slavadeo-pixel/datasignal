@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>DataSignal</title>
+</head>
+
+<body>
+<h1>DataSignal Analytics</h1>
+
+<table border="1">
+<tr>
+    <th>Команда</th>
+    <th>Победы дома %</th>
+    <th>Голы дома</th>
+    <th>Поражения гостей %</th>
+    <th>Форма последних 5</th>
+    <th>Вероятность %</th>
+    <th>Коэффициент</th>
+</tr>
+
+{% for m in matches %}
+<tr>
+    <td>{{m.team}}</td>
+    <td>{{m.home_win}}</td>
+    <td>{{m.home_goals}}</td>
+    <td>{{m.away_loss}}</td>
+    <td>{{m.form}}</td>
+    <td>{{m.prob}}</td>
+    <td>{{m.odds}}</td>
+</tr>
+{% endfor %}
+
+</table>
+</body>
+
+</html>
